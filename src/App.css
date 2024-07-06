@@ -1,0 +1,35 @@
+.navbar-background {
+    /* background: rgba(255, 255, 255, 0.25); */
+    background: rgba(70, 31, 85, 0.25);
+    /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+}
+
+.navbar-items {
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.navbar-items::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #9333ea;
+  }
+  
+@keyframes width-animation {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.navbar-items:hover:after {
+    animation: width-animation 300ms ease-in-out forwards;
+}
