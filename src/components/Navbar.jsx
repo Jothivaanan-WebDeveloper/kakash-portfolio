@@ -24,23 +24,25 @@ const Navbar = () => {
             <section className='fixed top-0 left-0 w-full z-50 bg-opacity-70 backdrop-blur-md navbar-background'>
                 <div className='flex justify-between items-center mx-auto max-w-[1300px] text-gray-200 px-12 h-20'>
                     <div>
-                        <a href='#' className='font-bold text-base md:text-2xl capitalize'>Copy Ninja</a>
+                        <Link href='hero' to='hero' smooth={true} duration={800} offset={-200}>
+                            <a href='#' className='font-bold text-base md:text-2xl capitalize'>Copy Ninja</a>
+                        </Link>
                     </div>
                     <div>
                         <ul className='hidden gap-12 md:flex z-10 cursor-pointer font-semibold'>
                             <li>
-                                <Link to='about' smooth={true} duration={500} offset={50}>
-                                    <span className='navbar-items'>About</span>
+                                <Link href='skills' to='skills' smooth={true} duration={800} offset={-500}>
+                                    <span className='navbar-items'>Skills</span>
                                 </Link>
                             </li>
                             <li>
-                                <Link href='portfolio' to='portfolio' smooth={true} duration={500} offset={50}>
-                                    <span className='navbar-items'>Portfolio</span>
+                                <Link href='journey' to='journey' smooth={true} duration={800} offset={-200}>
+                                    <span className='navbar-items'>Journey</span>
                                 </Link>
                             </li>
                             <li>
-                                <Link to='contact' smooth={true} duration={500} offset={50}>
-                                    <span className='navbar-items'>Contacts</span>
+                                <Link href='trivia' to='trivia' smooth={true} duration={800} offset={-150}>
+                                    <span className='navbar-items'>Trivia</span>
                                 </Link>
                             </li>
                         </ul>
@@ -58,13 +60,19 @@ const Navbar = () => {
                     >
                         <ul className='mt-24 font-semibold text-xl flex flex-col justify-center items-center space-y-4 text-gray-200'>
                             <li onClick={closeNav}>
-                                <Link to='about' smooth={true} duration={500} offset={50} >About</Link>
+                                <Link onClick={closeNav} href='skills' to='skills' smooth={true} duration={800} offset={-500}>
+                                    <span className='navbar-items'>Skills</span>
+                                </Link>
                             </li>
                             <li onClick={closeNav}>
-                                <Link to='portfolio' smooth={true} duration={500} offset={50} >Portfolio</Link>
+                                <Link onClick={closeNav} href='journey' to='journey' smooth={true} duration={800} offset={-200}>
+                                    <span className='navbar-items'>Journey</span>
+                                </Link>
                             </li>
                             <li onClick={closeNav}>
-                                <Link to='contact' smooth={true} duration={500} offset={50} >Contacts</Link>
+                                <Link onClick={closeNav} href='trivia' to='trivia' smooth={true} duration={800} offset={-150}>
+                                    <span className='navbar-items'>Trivia</span>
+                                </Link>
                             </li>
                         </ul>
                     </motion.div>

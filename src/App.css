@@ -19,12 +19,13 @@
     height: 2px;
     width: 0;
     background-color: #9333ea;
-  }
-  
+}
+
 @keyframes width-animation {
     0% {
         width: 0;
     }
+
     100% {
         width: 100%;
     }
@@ -32,4 +33,67 @@
 
 .navbar-items:hover:after {
     animation: width-animation 300ms ease-in-out forwards;
+}
+
+@keyframes auto-show-animation {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.show-animation {
+    animation: auto-show-animation both;
+    animation-timeline: view();
+}
+
+@keyframes animate-journey {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.journey-animtion {
+    animation: animate-journey both;
+    animation-timeline: view(40%, auto);
+}
+
+@keyframes animate-skills-card {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.skills-card-container {
+    animation: animate-skills-card 0.5s both;
+    animation-timeline: view(60% auto);
+    /* Adjust the duration as needed */
+}
+
+@keyframes animate-trivia-card {
+    0% {
+        translate: 0 10;
+    }
+
+    90% {
+        translate: 0 0;
+    }
+}
+
+.trivia-card-container {
+    animation: animate-trivia-card both;
+    animation-timeline: view();
 }

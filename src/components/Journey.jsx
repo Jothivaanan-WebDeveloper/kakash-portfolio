@@ -1,13 +1,14 @@
 import React from 'react'
 import { motion } from 'framer-motion';
-import Content from '../components/Content'
+import Content from './Helpers/Content'
 import Project1 from '../assets/1.png';
 import Project2 from '../assets/2.png';
 import Project3 from '../assets/3.jpg';
 import Project4 from '../assets/4.jpg';
 import Project5 from '../assets/5.jpg';
+import HeadingHelper from './Helpers/HeadingHelper';
 
-const Portfolio = () => {
+const Journey = () => {
     const projects = [
         {
             img: Project1,
@@ -37,13 +38,17 @@ const Portfolio = () => {
     ];
 
     return (
-        <div className='max-w-[1000px] mx-auto min-h-screen'>
+        <section id='journey' className='flex flex-col items-center gap-6 p-2 min-h-screen mt-8 md:mt-24 lg:mt-0'>
 
-            <div className='text-center'>
-                <span className='text-gray-300 font-semibold text-lg md:text-4xl'>Journey</span>
+            <div className='text-center md:-mt-14 mb-0 md:mb-4 show-animation'>
+                <span className='text-gray-300 text-2xl font-semibold md:text-4xl '>Journey</span>
             </div>
 
-            <div className='mt-3'>
+            <div className='show-animation'>
+                <HeadingHelper text={"From the harsh realities of war to the peace of Hokage, my journey is one of growth."} />
+            </div>
+
+            <div className=''>
                 {
                     projects.map((el, index) => (
                         <>
@@ -54,9 +59,9 @@ const Portfolio = () => {
                                 transition={{ duration: 0.5, delay: 0.3 }}
                             >
                                 <div key={index}
-                                    className={`flex flex-col items-center md:items-start md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} mb-12`}
+                                    className={`flex flex-col items-center md:max-w-[1000px] md:items-start md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
                                 >
-                                    <div className='w-1/2 p-4'>
+                                    <div className='w-full md:w-1/2 p-4 show-animation'>
                                         <img
                                             src={el.img}
                                             alt={el.title}
@@ -79,8 +84,8 @@ const Portfolio = () => {
             </div>
 
 
-        </div>
+        </section>
     )
 }
 
-export default Portfolio
+export default Journey

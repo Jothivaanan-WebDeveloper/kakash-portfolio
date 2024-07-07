@@ -9,6 +9,7 @@ import { MdEnergySavingsLeaf, MdLocalFireDepartment, MdOutlineSportsMartialArts 
 import { PiEyeFill, PiFlowerLotusFill, PiHurricaneBold } from 'react-icons/pi';
 import { GiRunningNinja } from 'react-icons/gi';
 import { IoLogoReact } from 'react-icons/io5';
+import HeadingHelper from './Helpers/HeadingHelper';
 
 const Skills = () => {
     const skills = [
@@ -55,32 +56,26 @@ const Skills = () => {
             initial={{ scale: 0.3 }}
             whileInView={{ scale: 1 }}
             transition={{ duration: 0.5 }}
-            className='flex flex-col items-center gap-6 p-2 min-h-screen' id='skills'>
+            className='flex flex-col items-center gap-6 p-2 min-h-screen mt-8 lg:mt-0' id='skills'>
             <div>
-                <span className='text-gray-300 font-semibold text-lg md:text-4xl'>Skills</span>
+                <span className='text-2xl text-gray-300 font-semibold md:text-4xl'>Skills</span>
             </div>
 
-            <div className='mt- text-center max-w-[300px] md:max-w-[700px]'>
-                <span className='text-lg md:text-xl text-gray-400 font-medium tracking-wider leading-loose'>
-                    I've successfully completed a variety of missions, from D-rank to S-rank, leveraging my skills and experience.
-                </span>
-            </div>
-
-            <hr className="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
+            <HeadingHelper text={"I've successfully completed a variety of missions, from D-rank to S-rank, leveraging my skills and experience."} />
 
             <div className='flex flex-wrap justify-around items-center gap-12 p-4'>
                 {
                     skills.map((el, index) => (
-                        <div key={index} className='mt-6 w-1/2 md:w-1/2 lg:w-1/3 bg-purple-900/20 rounded-lg shadow-2xl p-4'>
+                        <div key={index} className='mt-6 w-80 md:w-1/2 lg:w-1/3 card-container skills-card-container'>
                             <div className='text-center'>
-                                <span className='text-gray-300/90 font-semibold text-base md:text-2xl'>{el.category}</span>
+                                <span className='text-gray-300/90 font-semibold text-xl md:text-2xl'>{el.category}</span>
                             </div>
                             <div className='flex flex-col justify-center items-center md:grid md:grid-cols-2 gap-2 mt-2 text-left'>
                                 {
                                     el.technologies.map((tech, index) => (
                                         <div key={index} className={`mt-2 flex gap-2 items-center p-2`}>
                                             <span className='text-sm md:text-3xl'>{tech.icon}</span>
-                                            <span className='text-gray-400 font-regular text-sm md:text-lg'>{tech.name}</span>
+                                            <span className='text-gray-400 font-regular text-sm lg:text-lg'>{tech.name}</span>
                                         </div>
                                     ))
                                 }
