@@ -2,7 +2,7 @@
 
 Welcome to the Kakashi Hatake Fan Website! This website is dedicated to showcasing the legendary ninja from the Naruto series, Kakashi Hatake. The site highlights key aspects of Kakashi's life, his skills, his journeys, and some interesting trivia.
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 ## Table of Contents
 
@@ -72,8 +72,8 @@ To run this project locally, follow these steps:
 
 1. **Clone the repository**
     ```bash
-    git clone https://github.com/your-username/kakashi-hatake-website.git
-    cd kakashi-hatake-website
+    git clone https://github.com/Jothivaanan-WebDeveloper/kakash-portfolio.git
+    cd kakashi-portfolio
     ```
 
 2. **Install dependencies**
