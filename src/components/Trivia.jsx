@@ -79,6 +79,7 @@ const Trivia = () => {
 
 
     return (
+        // <section className='flex flex-col items-center gap-6 p-2 min-h-screen mt-12' id='trivia'>
         <section className='flex flex-col items-center gap-6 p-2 min-h-screen mt-12' id='trivia'>
             <div>
                 <span className='text-gray-300 font-semibold text-2xl md:text-4xl'>Trivia</span>
@@ -94,7 +95,7 @@ const Trivia = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ type: 'spring', stiffness: 100, damping: 10 }}
                             key={index}
-                            className='card-container flex flex-col md:flex-row gap-4 justify-center items-center md:items-start p-2'>
+                            className='card-container flex flex-col md:flex-row gap-4 justify-center items-center md:items-start p-2 border-2 border-purple-950 lg:h-[10rem]'>
                             <div className=''>
                                 <img
                                     className='object-cover rounded-full w-14 h-14 xl:w-24 xl:h-24'  // Ensure width and height are equal

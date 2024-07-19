@@ -56,7 +56,7 @@ const Skills = () => {
             initial={{ scale: 0.3 }}
             whileInView={{ scale: 1 }}
             transition={{ duration: 0.5 }}
-            className='flex flex-col items-center gap-6 p-2 min-h-screen mt-8 lg:mt-0' id='skills'>
+            className='flex flex-col items-center gap-6 p-2 min-h-screen -mt-[5rem] md:-mt-[14rem] lg:-mt-[3rem] xl:-mt-5' id='skills'>
             <div>
                 <span className='text-2xl text-gray-300 font-semibold md:text-4xl'>Skills</span>
             </div>

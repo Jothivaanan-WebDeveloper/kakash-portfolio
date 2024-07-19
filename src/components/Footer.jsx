@@ -22,7 +22,7 @@ const Footer = () => {
     const footerIcons = [<FaFacebook />, <FaWhatsapp />, <FaInstagram />, <FaTwitter />, <FaLinkedin />];
 
     return (
-        <footer className="w-full bg-gray-900 text-gray-400 py-8 mt-5 xl:-mt-24 2xl:mt-1">
+        <footer className="w-full bg-gray-900 text-gray-400 py-8 mt-5 xl:-mt-16 2xl:-mt-28">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row justify-between items-center">
                     {/* Logo or Website Name */}

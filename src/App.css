@@ -64,7 +64,7 @@
 
 .journey-animtion {
     animation: animate-journey both;
-    animation-timeline: view(40%, auto);
+    animation-timeline: view(80%, auto);
 }
 
 @keyframes animate-skills-card {

@@ -4,6 +4,9 @@ Welcome to the Kakashi Hatake Fan Website! This website is dedicated to showcasi
 
 ![alt text](image-1.png)
 
+# Firebase link
+https://kakashi-portfolio.web.app
+
 ## Table of Contents
 
 - [Introduction](#introduction)

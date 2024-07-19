@@ -29,3 +29,43 @@ p {
 .bg-primary-color {
     @apply bg-purple-600
 }
+
+/* For WebKit browsers */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(70, 31, 85, 0.1);  /* Lighter background for the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(70, 31, 85, 0.25);  /* Scrollbar thumb color */
+  border-radius: 6px;
+  border: 3px solid rgba(255, 255, 255, 0.1);  /* Adds padding around the thumb */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(84, 42, 100, 0.966) rgba(70, 31, 85, 0.1);  /* thumb and track color */
+}
+
+/* For Internet Explorer and Edge */
+body {
+  -ms-overflow-style: none;  /* Disables the scrollbar */
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(70, 31, 85, 0.1);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(70, 31, 85, 0.25);
+  border-radius: 6px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+}

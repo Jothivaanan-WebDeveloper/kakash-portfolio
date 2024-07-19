@@ -14,9 +14,9 @@ import { TypeAnimation } from 'react-type-animation';
 const Hero = () => {
     return (
         <>
-            <section className='relative mx-auto max-w-[1300px] mt-24 text-gray-200 min-h-screen overflow-hidden' id='hero'>
+            <section className='relative mx-auto max-w-[1300px] mt-[8rem] md:mt-[6rem] lg:mt-[3rem] text-gray-200 min-h-screen overflow-hidden lg:mb-1 ' id='hero'>
 
-                <div className='grid md:grid-cols-2 place-items-center gap-8 md:p-10'>
+                <div className='grid md:grid-cols-2 place-items-center gap-8 md:p-10 xl:mt-12'>
                     <motion.div
                     >
                         <motion.p
@@ -39,10 +39,11 @@ const Hero = () => {
                         >
                             <TypeAnimation
                                 sequence={[
-                                    "I am Kakashi Hatake, also known as the Copy Ninja. With a keen mastery of over a thousand jutsus, I have honed my skills through countless missions and battles. As a leader of Team 7 and a former Anbu captain, I bring unparalleled expertise and strategic thinking to every challenge...",
+                                    "I am Kakashi Hatake, the Copy Ninja. With mastery of a thousand jutsus and as a former Anbu captain, I lead Team 7 with strategic expertise and experience.",
                                 ]}
                                 wrapper="span"
                                 cursor={true}
+                                speed={60}
                                 className='text-sm md:text-base text-gray-400 font-medium tracking-wider'
                             />
 
@@ -88,7 +89,7 @@ const Hero = () => {
                     </motion.img>
                 </div>
 
-                <div className='mt-4'>
+                <div className='mt-4 lg:mt-0'>
                     <motion.div
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}

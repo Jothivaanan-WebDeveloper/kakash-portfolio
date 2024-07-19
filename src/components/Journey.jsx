@@ -38,7 +38,7 @@ const Journey = () => {
     ];
 
     return (
-        <section id='journey' className='flex flex-col items-center gap-6 p-2 min-h-screen mt-8 md:mt-24 lg:mt-0'>
+        <section id='journey' className='flex flex-col items-center gap-6 p-2 min-h-screen mt-8 md:mt-24 lg:mt-[4rem] xl:-mt-24'>
 
             <div className='text-center md:-mt-14 mb-0 md:mb-4 show-animation'>
                 <span className='text-gray-300 text-2xl font-semibold md:text-4xl '>Journey</span>
@@ -52,30 +52,24 @@ const Journey = () => {
                 {
                     projects.map((el, index) => (
                         <>
-                            <motion.div
-                                key={index}
-                                initial={{ scaleX: 0 }}
-                                whileInView={{ scaleX: 1 }}
-                                transition={{ duration: 0.5, delay: 0.3 }}
+
+                            <div key={index}
+                                className={`flex flex-col items-center md:max-w-[1000px] md:items-start md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
                             >
-                                <div key={index}
-                                    className={`flex flex-col items-center md:max-w-[1000px] md:items-start md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
-                                >
-                                    <div className='w-full md:w-1/2 p-4 show-animation'>
-                                        <img
-                                            src={el.img}
-                                            alt={el.title}
-                                            className='w-full object-cover rounded-lg'
-                                        />
-                                        <div className='text-gray-300 mt-4 flex flex-col'>
-                                            <span className='text-base md:text-xl font-medium space-y-8'>{el.title}</span>
-                                            <span>
-                                                <Content text={el.description} />
-                                            </span>
-                                        </div>
+                                <div className='w-full md:w-1/2 p-4 show-animation'>
+                                    <img
+                                        src={el.img}
+                                        alt={el.title}
+                                        className='w-full object-cover rounded-lg'
+                                    />
+                                    <div className='text-gray-300 mt-4 flex flex-col'>
+                                        <span className='text-base md:text-xl font-medium space-y-8'>{el.title}</span>
+                                        <span>
+                                            <Content text={el.description} />
+                                        </span>
                                     </div>
                                 </div>
-                            </motion.div>
+                            </div>
 
                         </>
 
